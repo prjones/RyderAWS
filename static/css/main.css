@@ -1,0 +1,93 @@
+
+/*
+* Formating for image
+*/
+img {  display: block;}
+img.wrap {  max-width: 70%;  margin: 0px 0px; }
+img.align-right {  float: right;  margin-left: 30px; }
+img.align-left {  float: left;  margin-right: 30px; }
+
+/*
+* General html block formating
+*/
+body {
+   margin: auto;
+   padding: 5px;
+   color: #dddddd;
+   background-color: #faf0f0;
+   font-family:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1.logo {
+  font-size: 1.8em;
+  color: #b4b4b486;
+  text-transform: uppercase;
+  float: left;
+  margin-top: 35px;
+  margin-left: 15px;
+}
+
+/*
+* Formating of three display areas, header, contrain, and footer
+*/
+
+div.header {
+  height: 100px;
+  width:90%;
+  background-color:#242f3e;
+  margin:  auto;
+  border: 2px solid #242f3e;
+  border-radius: 0px 50px 5px 0px;
+}
+div.container  {
+  width: 90%;
+  background-color:#E6E6FA;
+  color: #111111;
+  margin: 0 auto;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 3px 3px 3px 3px;
+}
+div.footer {
+  height: 30px;
+  width: 90%;
+  background-color:#dfb887;
+  margin: 0 auto;
+  border:2px solid #9b8554;
+  border-radius: 3px 3px 50px 3px;
+}
+
+/*
+* Formatting of our menu content
+*/
+ul.menu {
+  float: right;
+  margin-top: 60px;
+  margin-right: 40px;
+}
+
+ul.menu li {
+  display: inline;
+}
+
+
+ul.menu li + li {
+  margin-left: 20px;
+}
+
+ul.menu li a {
+  color: #b4b4b4c0;
+  text-decoration: none;
+}
+
+ul.menu li:hover {
+  color: #444444;
+  text-decoration: overline underline;
+}
+
+div.footer p {
+  color: #444444;
+  font-family: "Courier New", Courier;
+  font-size: 13px;
+  margin: 7px 15px;
+  font-style: italic;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ryder Scooters</title>
+  <link rel="icon" href="https://cdn3.iconfinder.com/data/icons/sports-and-games-2-8/85/scooter_kick-512.png">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #242f3e;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #999999;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="{{url_for('static', filename='images/ryderlogo.png')}}" class="wrap align-right" height="50" width="50"/>
+        <a href="{{ url_for('home')}}">Home</a>
+        <a href="{{ url_for('about')}}">About</a>
+        <a href="{{ url_for('contact')}}">Contact</a>
+        <a href="{{ url_for('read_csv')}}">CSV</a>
+        <div class="dropdown">
+          <button class="dropbtn">Login 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="{{ url_for('userLogin')}}">User</a>
+            <a href="{{ url_for('userLogin')}}">Manager</a>
+          </div>
+        </div> 
+      </div>
+   <div class="container">
+     {%block content%}
+     {%endblock%}
+   </div>
+   <div class="footer">
+     <p>Ryder Scooters: A Last Mile Transportation System</p>
+   </div>
+</body>

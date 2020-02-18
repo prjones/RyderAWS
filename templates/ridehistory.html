@@ -1,0 +1,17 @@
+{%extends "manager_login_ok.html"%}
+{%block content%}
+  <h1>All Ride History</h1>
+  <div class="table">
+        <h1>All Users Previous Rides</h1>
+      <table border=1 align="center">
+        {% for row in content %}
+        <tr frame="box">
+          {% for item in row: %}
+                <td> {{item}} </td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </table>
+      <br>
+      </div>
+{%endblock%}

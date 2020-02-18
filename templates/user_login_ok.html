@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <title>Flask app</title>
+    <link rel="icon" href="https://cdn3.iconfinder.com/data/icons/transport-04-set-of-motorcycles-and-bicycles/100/Motorcycles_and_bicycles_11-512.png" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/practice.css') }}"/> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" />
+  </head>
+
+  <body>
+        <div class="container">
+                {%block content%}
+                {%endblock%}
+              </div>
+    <div class="area"></div><nav class="main-menu">
+             
+            <ul>
+                <li>
+                    <a href="/ride">
+                        <i class="fa fa-location-arrow"></i>
+                        <span class="nav-text">
+                            Ride Now
+                        </span>
+                    </a>
+                  
+                </li>
+                <li class="has-subnav">
+                    <a href="/reserve">
+                        <i class="fa fa-lock"></i>
+                        <span class="nav-text">
+                            Reserve
+                        </span>
+                    </a>
+                    
+                </li>
+                <li class="has-subnav">
+                    <a href="/pickup">
+                       <i class="fa fa-unlock"></i>
+                        <span class="nav-text">
+                            Pickup
+                        </span>
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a href="/account">
+                        <i class="fa fa-user fa-x2"></i>
+                        <span class="nav-text">
+                            Account
+                        </span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="logout">
+                <li>
+                   <a href="/logout">
+                         <i class="fa fa-power-off fa-2x"></i>
+                        <span class="nav-text">
+                            Logout
+                        </span>
+                    </a>
+                </li>  
+            </ul>
+        </nav>
+
+
+ 
+
+ 
+  </body>
+    </html>

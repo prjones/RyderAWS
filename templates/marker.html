@@ -1,0 +1,60 @@
+{%extends "maplayout.html"%}
+{%block content%}
+  <head>
+    <style>
+      /* Set the size of the div element that contains the map */
+      #map {
+        height: 800px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+        float: right;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>Ryder Stations</h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
+    <script>
+// Initialize and add the map
+function initMap() {
+
+    // Icon stuff
+  //var iconBase =
+  //      'http://maps.google.com/mapfiles/kml/shapes/poi.png';
+
+  //      var icons = {
+  //        parking: {
+  //          icon: iconBase + 'poi.png'
+  //        }
+  //      }
+
+    // Iowa State lat/long to use for centering
+  var iowaState = {lat: 42.0266187, lng: -93.6464654};
+  // The locations of the Docking Stations
+  var frCourt = {lat: 42.0339213, lng: -93.6430000};
+  var memUnion = {lat: 42.02365, lng: -93.6459455};
+  var library = {lat: 42.0281254, lng: -93.6488141};
+  var kilHall = {lat: 42.0295129, lng: -93.6438587};
+  var stateGym = {lat: 42.0250759, lng: -93.6536049};
+  var mapleLarch = {lat: 42.0237874, lng: -93.6382459};
+  var towers = {lat: 42.015988, lng: -93.649992};
+  
+  // The map, centered at Iowa State
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 15, center: iowaState});
+  
+      // The markers
+  var marker1 = new google.maps.Marker({position: frCourt, map: map});
+  var marker2 = new google.maps.Marker({position: memUnion, map: map});
+  var marker3 = new google.maps.Marker({position: library, map: map});
+  var marker4 = new google.maps.Marker({position: kilHall, map: map});
+  var marker5 = new google.maps.Marker({position: stateGym, map: map});
+  var marker6 = new google.maps.Marker({position: mapleLarch, map: map});
+  var marker7 = new google.maps.Marker({position: towers, map: map});
+}
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9byGYLqCfDxvyapHypnk_6nYDD9wg2qo&callback=initMap">
+    </script>
+  </body>
+  {%endblock%}

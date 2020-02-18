@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <title>Flask app</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/scatter.css') }}"/> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" />
+  </head>
+
+  <body>
+    <div class="container">
+            <h1>Scatter Plot of Charge of Scooters vs Usage</h1>
+             
+    </div>         
+    <div class="area"></div><nav class="main-menu">
+             
+            <ul>
+                <li>
+                    <a href="/analysis">
+                        <i class="fa fa-calculator"></i>
+                        <span class="nav-text">
+                            Analysis
+                        </span>
+                    </a>
+                  
+                </li>
+                <li class="has-subnav">
+                    <a href="/map">
+                        <i class="fa fa-map-marked-alt"></i>
+                        <span class="nav-text">
+                            Map
+                        </span>
+                    </a>
+                    
+                </li>
+                <li class="has-subnav">
+                    <a href="/ridehistory">
+                       <i class="fa fa-history"></i>
+                        <span class="nav-text">
+                            Ride History
+                        </span>
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a href="/userhistory">
+                        <i class="fa fa-user-clock fa-x2"></i>
+                        <span class="nav-text">
+                            User History
+                        </span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="logout">
+                <li>
+                   <a href="/logout">
+                         <i class="fa fa-power-off fa-2x"></i>
+                        <span class="nav-text">
+                            Logout
+                        </span>
+                    </a>
+                </li>  
+            </ul>
+        </nav>
+
+
+ 
+
+ 
+  </body>
+    </html>
+
+
+
+

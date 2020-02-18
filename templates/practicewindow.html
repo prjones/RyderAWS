@@ -1,0 +1,84 @@
+<html>
+  <head>
+    <title>Flask app</title>
+    <link rel="icon" href="https://cdn3.iconfinder.com/data/icons/transport-04-set-of-motorcycles-and-bicycles/100/Motorcycles_and_bicycles_11-512.png" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/practice.css') }}"/>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" />
+  </head>
+ 
+  <body><div class="area">
+        <div class="container">
+                {%block content%}
+                {%endblock%}
+              </div>
+  </div><nav class="main-menu">
+
+            <ul>
+                <li>
+                    <a href="https://ryderscooters.com/home">
+                        <i class="fa fa-home"></i>
+                        <span class="nav-text">
+                            Home
+                        </span>
+                    </a>
+                  
+                </li>
+                <li class="has-subnav">
+                    <a href="https://ryderscooters.com/about">
+                        <i class="fa fa-info"></i>
+                        <span class="nav-text">
+                            About
+                        </span>
+                    </a>
+                    
+                </li>
+                <li class="has-subnav">
+                    <a href="https://ryderscooters.com/contact">
+                       <i class="fa fa-list"></i>
+                        <span class="nav-text">
+                            Contact
+                        </span>
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a href="/login">
+                        <i class="fa fa-user"></i>
+                        <span class="nav-text">
+                            User Login
+                        </span>
+                    </a>
+                </li>
+            </ul>
+                <li class="has-subnav">
+                        <a href="/managerlogin">
+                            <i class="fa fa-user-cog"></i>
+                            <span class="nav-text">
+                                Manager Login
+                            </span>
+                        </a>
+                        
+                    </li>
+
+            <ul class="logout">
+                <li>
+                   <a href="/logout">
+                         <i class="fa fa-power-off"></i>
+                        <span class="nav-text">
+                            Logout
+                        </span>
+                    </a>
+                </li>  
+            </ul>
+        </nav>
+
+<!-- 
+    <body class="hero-full-screen">
+        <div class="middle-content-section">
+            <h1>Ryder</h1>
+        </div>
+    </body>  
+ -->
+  </body>
+    </html>

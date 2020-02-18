@@ -1,0 +1,18 @@
+{%extends "manager_login_ok.html"%}
+{%block content%}
+  <h1>Analysis</h1>
+  <h2>Select which type of graph you want</h2>
+  
+    <br/>
+    <br/>
+    <form action="/analytic-bar/" method="POST"></form>
+    <button onclick="window.location.href = '/barchart/';">Bar Chart</button>
+    </form>
+    <form action="/analytic-scatter" method="POST"></form>
+    <button onclick="window.location.href = '/scatterchart/';">Scatter Chart</button>
+    </form>
+    <br/>
+    <br/>
+    <br/>
+  
+{%endblock%}
