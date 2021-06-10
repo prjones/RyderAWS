@@ -10,7 +10,7 @@ certifi==2019.9.11
 chardet==3.0.4
 Click==7.0
 decorator==4.4.1
-Django==2.2.7
+Django==2.2.24
 Flask==0.12.2
 future==0.18.2
 geocoder==1.38.1
